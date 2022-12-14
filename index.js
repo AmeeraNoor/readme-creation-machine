@@ -17,39 +17,45 @@ const questions = [
   },
   {
     type: 'input',
+    message: 'Installation:',
+    name: 'Installation',
+  },
+  {
+    type: 'input',
+    message: 'Instructions:',
+    name: 'Instructions',
+  },
+  {
+    type: 'input',
+    message: 'Usage:',
+    name: 'Usage',
+  },
+  {
+    type: 'input',
+    message: 'Contributing:',
+    name: 'Contributing',
+  },
+  {
+    type: 'input',
+    message: 'Tests:',
+    name: 'Tests',
+  },
+  {
+    type: 'list',
     message: 'License:',
+    choices: ['Apache', 'MIT','GNU GPL v3', 'GNU GPL v2', 'GNU AGPL v3'],
     name: 'License',
   },
-  // {
-  //   type: 'input',
-  //   message: 'Installation:',
-  //   name: 'Installation',
-  // },
-  // {
-  //   type: 'input',
-  //   message: 'Instructions:',
-  //   name: 'Instructions',
-  // },
-  // {
-  //   type: 'input',
-  //   message: 'Usage:',
-  //   name: 'Usage',
-  // },
-  // {
-  //   type: 'input',
-  //   message: 'Contributing:',
-  //   name: 'Contributing',
-  // },
-  // {
-  //   type: 'input',
-  //   message: 'Tests:',
-  //   name: 'Tests',
-  // },
-  // {
-  //   type: 'input',
-  //   message: 'Questions:',
-  //   name: 'Questions',
-  // }
+  {
+    type: 'input',
+    message: 'Email:',
+    name: 'Email',
+  },
+  {
+    type: 'input',
+    message: 'GitHub:',
+    name: 'GitHub',
+  }
 ]
 
 let data = {
@@ -57,7 +63,13 @@ let data = {
   tableOfContents: [],
   license: "",
   description: "",
-
+  installation: "",
+  instructions: "",
+  usage: "",
+  contributing: "",
+  tests: "",
+  email: "",
+  github: ""
 }
 
 // TODO: Create a function to write README file
@@ -77,6 +89,13 @@ function init() {
     data.title = response.Title
     data.description = response.Description
     data.license = response.License
+    data.installation = response.Installation
+    data.instructions = response.Instructions
+    data.usage = response.Usage
+    data.contributing = response.Contributing
+    data.tests = response.Tests
+    data.email = response.Email
+    data.github = response.GitHub
     console.log(data)
     writeToFile("README", generateMarkdown(data))
   });
@@ -84,10 +103,11 @@ function init() {
 
 function generateTableOfContents(questions) {
   questions.forEach(element => {
-    if (element.name != "Title") {
+    if (element.name != "Title" || element.name != "Email" || element.name != "GitHub") {
       data.tableOfContents.push(element.name)
     }
-  });  
+  });
+  data.tableOfContents.push("Questions")
 }
 
 // Function call to initialize app
