@@ -16,25 +16,25 @@
  * [Questions](#Questions)
 
 ## Description 
- ng the command lines
+ This application allows you to efficiently and easily fill out your readme file professionally using just the command line with Node.js.
 
 ## License 
 This application is covered under [MIT](https://opensource.org/licenses/MIT)
 
 ## Installation 
- step 1 download, step 2 fill out info
+ Go to command line and type node index.js
 
 ## Instructions 
  fill out each prompt accordingly to create readme file
 
 ## Usage 
- for every student
+ to create a professional ReadMe file
 
 ## Contributing 
- nobody
+ No requirements for contributing
 
 ## Tests 
- none
+ Using the application repeatedly.
 
 ## Questions?
 ### Reach me here:
