@@ -41,4 +41,6 @@ This application is covered under [MIT](https://opensource.org/licenses/MIT)
 [AmeeraNoor](https://github.com/AmeeraNoor)
 
 a.noor71296@gmail.com
+
+Link to walkthrough video: https://drive.google.com/file/d/1NEvt65VEBt2qRUXf7aiY2EJ-GW_tIar3/view
   
